@@ -1,4 +1,4 @@
-import React from "react"
+import { Fragment } from "react"
 import {
   StyleSheet,
   Text,
@@ -18,17 +18,17 @@ interface Link {
 const links: Link[] = [
   {
     title: "React",
-    link: "https://reactjs.org/",
+    link: "https://reactjs.org",
     description: "JavaScript library for building user interfaces",
   },
   {
     title: "Redux",
-    link: "https://redux.js.org/",
+    link: "https://redux.js.org",
     description: "A Predictable State Container for JS Apps",
   },
   {
     title: "Redux Toolkit",
-    link: "https://redux-toolkit.js.org/",
+    link: "https://redux-toolkit.js.org",
     description:
       "The official, opinionated, batteries-included toolset for efficient Redux development",
   },
@@ -46,7 +46,7 @@ export const LearnReduxLinks = () => {
     <View style={styles.container}>
       {links.map((item, index) => {
         return (
-          <React.Fragment key={index}>
+          <Fragment key={index}>
             <View
               style={[
                 styles.separator,
@@ -74,7 +74,7 @@ export const LearnReduxLinks = () => {
                 {item.description}
               </Text>
             </TouchableOpacity>
-          </React.Fragment>
+          </Fragment>
         )
       })}
     </View>
