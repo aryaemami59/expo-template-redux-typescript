@@ -1,22 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "@react-native",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/strict-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-    "plugin:react/jsx-runtime"
-  ],
-  "ignorePatterns": [
-    "node_modules",
-    ".vscode",
-    "dist",
-    "metro.config.js",
-    "assets",
-    ".expo",
-    ".expo-shared",
-    "webpack.config.ts"
-  ],
+  "extends": ["plugin:react/jsx-runtime"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": true,
@@ -34,7 +17,7 @@
   },
   "overrides": [
     {
-      "files": ["./__tests__/**/*.ts", "./__tests__/**/*.tsx"],
+      "files": ["./src/**/*test.ts", "./src/**/*test.tsx"],
       "env": { "jest": true }
     }
   ]
