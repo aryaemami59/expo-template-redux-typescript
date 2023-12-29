@@ -23,7 +23,7 @@ import { LearnReduxLinks } from "./src/components/LearnReduxLinks"
 import { Section } from "./src/components/Section"
 import { TypedColors } from "./src/constants/TypedColors"
 
-export const App: FC = () => {
+export const App = () => {
   const isDarkMode = useColorScheme() === "dark"
 
   const backgroundStyle = {
