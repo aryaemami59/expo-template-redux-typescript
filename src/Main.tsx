@@ -11,13 +11,13 @@ import { TypedColors } from "./constants/TypedColors"
 import { Header } from "./components/Header"
 import {
   DebugInstructions,
-  HermesBadge,
   LearnMoreLinks,
   ReloadInstructions,
 } from "react-native/Libraries/NewAppScreen"
 import { Counter } from "./features/counter/Counter"
 import { Section } from "./components/Section"
 import { LearnReduxLinks } from "./components/LearnReduxLinks"
+import { Quotes } from "./features/quotes/Quotes"
 
 export const Main = () => {
   const isDarkMode = useColorScheme() === "dark"
@@ -37,13 +37,13 @@ export const Main = () => {
         style={backgroundStyle}
       >
         <Header />
-        <HermesBadge />
         <View
           style={{
             backgroundColor: isDarkMode ? TypedColors.black : TypedColors.white,
           }}
         >
           <Counter />
+          <Quotes />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
